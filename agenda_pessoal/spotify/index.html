@@ -1,0 +1,500 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Spotify</title>
+        <link href="estilo.css" rel="stylesheet" type="text/css" media="all" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <!-- Navbar -->
+        <div class="alinhar">
+            <div class="left">
+                <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 39 39"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M0 19.2919C0 29.9198 8.77954 38.6993 19.4074 38.6993C30.0353 38.6993 38.8148 29.9198 38.8148 19.2919C38.8148 8.66402 30.0353 0 19.4074 0C8.77954 0 0 8.66402 0 19.2919ZM26.5697 28.3025C22.0644 25.53 16.2884 24.8369 9.58818 26.3386C7.9709 26.5697 7.73986 24.2593 9.1261 24.0282C16.5194 22.2954 22.7575 23.1041 27.8404 26.2231C29.1111 27.0317 27.8404 28.9956 26.5697 28.3025ZM28.5335 23.1041C23.3351 19.8695 15.3642 18.9453 9.24162 20.7937C7.27778 21.3713 6.58466 18.3677 8.43298 17.9056C15.4797 15.8263 24.1437 16.866 30.1508 20.5626C31.7681 21.6023 30.1508 24.1437 28.5335 23.1041ZM8.31746 14.9021C6.35362 15.5952 5.08289 12.2452 7.27778 11.4365C14.0935 9.35714 25.6455 9.7037 32.8078 13.978C34.7716 15.0176 32.9233 18.2522 30.8439 17.097C24.6058 13.4004 14.209 13.0538 8.31746 14.9021Z"
+                        fill="white"
+                    />
+                </svg>
+            </div>
+
+            <div class="left">
+                <div class="home">
+                    <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 23 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M11.8513 0.255711C11.4038 -0.0852365 10.7837 -0.0852365 10.3362 0.255711L0.984892 7.38051C0.364271 7.85337 0 8.58886 0 9.36909V21.25C0 22.7651 1.33172 23.75 2.65625 23.75H7.34375H14.8438H19.5312C20.8558 23.75 22.1875 22.7651 22.1875 21.25V9.36909C22.1875 8.58886 21.8232 7.85337 21.2026 7.38051L11.8513 0.255711ZM16.0938 21.25H19.5312C19.6107 21.25 19.6626 21.2244 19.6875 21.2058V9.36909L11.0938 2.82147L2.5 9.36909L2.5 21.2058C2.5249 21.2244 2.57678 21.25 2.65625 21.25H6.09375V13.75C6.09375 13.0596 6.65339 12.5 7.34375 12.5H14.8438C15.5341 12.5 16.0938 13.0596 16.0938 13.75V21.25ZM8.59375 21.25H13.5938V15H8.59375V21.25Z"
+                            fill="white"
+                            fill-opacity="0.5"
+                        />
+                    </svg>
+                </div>
+                <div class="buscando">
+                    <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 23 23"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M0 10C0 4.47716 4.47715 2.86125e-06 10 2.86125e-06C15.5228 2.86125e-06 20 4.47716 20 10C20 12.3111 19.214 14.4374 17.8975 16.1309L22.1338 20.3662C22.6219 20.8544 22.6219 21.6456 22.1338 22.1338C21.6456 22.6219 20.8544 22.6219 20.3662 22.1338L16.1299 17.8984C14.4366 19.2144 12.3106 20 10 20C4.47715 20 0 15.5229 0 10ZM2.5 10C2.5 14.1421 5.85786 17.5 10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85787 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85787 2.5 10Z"
+                            fill="currentColor"
+                        />
+                    </svg>
+                    <input type="text" placeholder="O que você quer ouvir?" />
+                    <div class="traco-vertical"></div>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="containerPerfil">
+                    <img src="euzinho.jpg" alt="euzinha" class="fotoPerfil" />
+                    <span class="namePerfil">Maria Eduarda</span>
+                    <i class="fa-solid fa-chevron-down" style="color: #fff"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-container">
+            <!-- Sidebar Left -->
+            <div class="main-left-part">
+                <nav class="sidebar-menu">
+                    <div class="menu-item">
+                        <i class="fa-solid fa-thumbtack"></i>
+                        <span>Pins</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fa-solid fa-music"></i>
+                        <span>Playlists</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Liked songs</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fa-solid fa-bookmark"></i>
+                        <span>Saves</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fa-solid fa-compact-disc"></i>
+                        <span>Albums</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Folders</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fa-solid fa-podcast"></i>
+                        <span>Podcasts</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fa-solid fa-book"></i>
+                        <span>Audiobooks</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Artists</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Main Right Part -->
+            <div class="main-right-part">
+                <div class="music-section">
+                    <h2>Músicas Populares</h2>
+                    <div class="songs">
+                        <div class="music-card">
+                            <img
+                                src="Images/capaOutraVida.jpg"
+                                alt="Outra Vida"
+                            />
+                            <div class="music-play-btn">
+                                <i
+                                    class="playMusic fa-solid fa-circle-play"
+                                    data-song-id="1"
+                                ></i>
+                            </div>
+                            <div class="img-title">Outra Vida</div>
+                            <div class="img-description">
+                                A melhor música para relaxar
+                            </div>
+                        </div>
+                        <div class="music-card">
+                            <img
+                                src="Images/capaOutraVida.jpg"
+                                alt="Outra Vida"
+                            />
+                            <div class="music-play-btn">
+                                <i
+                                    class="playMusic fa-solid fa-circle-play"
+                                    data-song-id="1"
+                                ></i>
+                            </div>
+                            <div class="img-title">Outra Vida</div>
+                            <div class="img-description">
+                                Ritmo perfeito para o dia
+                            </div>
+                        </div>
+                        <div class="music-card">
+                            <img
+                                src="Images/capaOutraVida.jpg"
+                                alt="Outra Vida"
+                            />
+                            <div class="music-play-btn">
+                                <i
+                                    class="playMusic fa-solid fa-circle-play"
+                                    data-song-id="1"
+                                ></i>
+                            </div>
+                            <div class="img-title">Outra Vida</div>
+                            <div class="img-description">
+                                Som envolvente e cativante
+                            </div>
+                        </div>
+                        <div class="music-card">
+                            <img
+                                src="Images/capaOutraVida.jpg"
+                                alt="Outra Vida"
+                            />
+                            <div class="music-play-btn">
+                                <i
+                                    class="playMusic fa-solid fa-circle-play"
+                                    data-song-id="1"
+                                ></i>
+                            </div>
+                            <div class="img-title">Outra Vida</div>
+                            <div class="img-description">
+                                Melodia inesquecível
+                            </div>
+                        </div>
+                        <div class="music-card">
+                            <img
+                                src="Images/capaOutraVida.jpg"
+                                alt="Outra Vida"
+                            />
+                            <div class="music-play-btn">
+                                <i
+                                    class="playMusic fa-solid fa-circle-play"
+                                    data-song-id="1"
+                                ></i>
+                            </div>
+                            <div class="img-title">Outra Vida</div>
+                            <div class="img-description">
+                                Perfeita para dançar
+                            </div>
+                        </div>
+                        <div class="music-card">
+                            <img
+                                src="Images/capaOutraVida.jpg"
+                                alt="Outra Vida"
+                            />
+                            <div class="music-play-btn">
+                                <i
+                                    class="playMusic fa-solid fa-circle-play"
+                                    data-song-id="1"
+                                ></i>
+                            </div>
+                            <div class="img-title">Outra Vida</div>
+                            <div class="img-description">
+                                Som suave e elegante
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="music-section">
+                    <h2>Recomendado para você</h2>
+                    <div class="songs">
+                        <div class="music-card">
+                            <img
+                                src="Images/capaOutraVida.jpg"
+                                alt="Outra Vida"
+                            />
+                            <div class="music-play-btn">
+                                <i
+                                    class="playMusic fa-solid fa-circle-play"
+                                    data-song-id="1"
+                                ></i>
+                            </div>
+                            <div class="img-title">Outra Vida</div>
+                            <div class="img-description">Seu novo favorito</div>
+                        </div>
+                        <div class="music-card">
+                            <img
+                                src="Images/capaOutraVida.jpg"
+                                alt="Outra Vida"
+                            />
+                            <div class="music-play-btn">
+                                <i
+                                    class="playMusic fa-solid fa-circle-play"
+                                    data-song-id="1"
+                                ></i>
+                            </div>
+                            <div class="img-title">Outra Vida</div>
+                            <div class="img-description">
+                                Descoberta musical
+                            </div>
+                        </div>
+                        <div class="music-card">
+                            <img
+                                src="Images/capaOutraVida.jpg"
+                                alt="Outra Vida"
+                            />
+                            <div class="music-play-btn">
+                                <i
+                                    class="playMusic fa-solid fa-circle-play"
+                                    data-song-id="1"
+                                ></i>
+                            </div>
+                            <div class="img-title">Outra Vida</div>
+                            <div class="img-description">
+                                Tendência do momento
+                            </div>
+                        </div>
+                        <div class="music-card">
+                            <img
+                                src="Images/capaOutraVida.jpg"
+                                alt="Outra Vida"
+                            />
+                            <div class="music-play-btn">
+                                <i
+                                    class="playMusic fa-solid fa-circle-play"
+                                    data-song-id="1"
+                                ></i>
+                            </div>
+                            <div class="img-title">Outra Vida</div>
+                            <div class="img-description">Som inovador</div>
+                        </div>
+                        <div class="music-card">
+                            <img
+                                src="Images/capaOutraVida.jpg"
+                                alt="Outra Vida"
+                            />
+                            <div class="music-play-btn">
+                                <i
+                                    class="playMusic fa-solid fa-circle-play"
+                                    data-song-id="1"
+                                ></i>
+                            </div>
+                            <div class="img-title">Outra Vida</div>
+                            <div class="img-description">Batida envolvente</div>
+                        </div>
+                        <div class="music-card">
+                            <img
+                                src="Images/capaOutraVida.jpg"
+                                alt="Outra Vida"
+                            />
+                            <div class="music-play-btn">
+                                <i
+                                    class="playMusic fa-solid fa-circle-play"
+                                    data-song-id="1"
+                                ></i>
+                            </div>
+                            <div class="img-title">Outra Vida</div>
+                            <div class="img-description">Clássico moderno</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="music-section">
+                    <h2>Reproduzidas recentemente</h2>
+                    <div class="songs">
+                        <div class="music-card">
+                            <img
+                                src="Images/capaOutraVida.jpg"
+                                alt="Outra Vida"
+                            />
+                            <div class="music-play-btn">
+                                <i
+                                    class="playMusic fa-solid fa-circle-play"
+                                    data-song-id="1"
+                                ></i>
+                            </div>
+                            <div class="img-title">Outra Vida</div>
+                            <div class="img-description">
+                                Voltando às favoritas
+                            </div>
+                        </div>
+                        <div class="music-card">
+                            <img
+                                src="Images/capaOutraVida.jpg"
+                                alt="Outra Vida"
+                            />
+                            <div class="music-play-btn">
+                                <i
+                                    class="playMusic fa-solid fa-circle-play"
+                                    data-song-id="1"
+                                ></i>
+                            </div>
+                            <div class="img-title">Outra Vida</div>
+                            <div class="img-description">Nostalgia musical</div>
+                        </div>
+                        <div class="music-card">
+                            <img
+                                src="Images/capaOutraVida.jpg"
+                                alt="Outra Vida"
+                            />
+                            <div class="music-play-btn">
+                                <i
+                                    class="playMusic fa-solid fa-circle-play"
+                                    data-song-id="1"
+                                ></i>
+                            </div>
+                            <div class="img-title">Outra Vida</div>
+                            <div class="img-description">Som inesquecível</div>
+                        </div>
+                        <div class="music-card">
+                            <img
+                                src="Images/capaOutraVida.jpg"
+                                alt="Outra Vida"
+                            />
+                            <div class="music-play-btn">
+                                <i
+                                    class="playMusic fa-solid fa-circle-play"
+                                    data-song-id="1"
+                                ></i>
+                            </div>
+                            <div class="img-title">Outra Vida</div>
+                            <div class="img-description">
+                                Releitura clássica
+                            </div>
+                        </div>
+                        <div class="music-card">
+                            <img
+                                src="Images/capaOutraVida.jpg"
+                                alt="Outra Vida"
+                            />
+                            <div class="music-play-btn">
+                                <i
+                                    class="playMusic fa-solid fa-circle-play"
+                                    data-song-id="1"
+                                ></i>
+                            </div>
+                            <div class="img-title">Outra Vida</div>
+                            <div class="img-description">Energia positiva</div>
+                        </div>
+                        <div class="music-card">
+                            <img
+                                src="Images/capaOutraVida.jpg"
+                                alt="Outra Vida"
+                            />
+                            <div class="music-play-btn">
+                                <i
+                                    class="playMusic fa-solid fa-circle-play"
+                                    data-song-id="1"
+                                ></i>
+                            </div>
+                            <div class="img-title">Outra Vida</div>
+                            <div class="img-description">Final perfeito</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="player-bar">
+            <div class="player-left">
+                <img
+                    src="Images/capaOutraVida.jpg"
+                    alt="Capa"
+                    id="playerImage"
+                />
+                <div class="player-song-info">
+                    <div class="player-song-name" id="playerTitle">
+                        Selecione uma música
+                    </div>
+                    <div class="player-song-artist" id="playerDescription">
+                        Clique para reproduzir
+                    </div>
+                </div>
+                <i class="fa-regular fa-heart player-like-btn"></i>
+            </div>
+
+            <div class="player-center">
+                <div class="player-controls">
+                    <i
+                        id="shuffle"
+                        class="fa-solid fa-shuffle player-control-btn"
+                    ></i>
+                    <i
+                        id="backward"
+                        class="fa-solid fa-step-backward player-control-btn"
+                    ></i>
+                    <i
+                        id="play"
+                        class="fa-solid fa-circle-play player-play-btn"
+                    ></i>
+                    <i
+                        id="forward"
+                        class="fa-solid fa-step-forward player-control-btn"
+                    ></i>
+                    <i
+                        id="repeat"
+                        class="fa-solid fa-repeat player-control-btn"
+                    ></i>
+                </div>
+                <div class="player-progress-wrapper">
+                    <span class="player-time" id="currentTime">0:00</span>
+                    <input
+                        type="range"
+                        id="progressBar"
+                        value="0"
+                        class="player-progress"
+                    />
+                    <span class="player-time" id="duration">0:00</span>
+                </div>
+            </div>
+
+            <div class="player-right">
+                <i class="fa-solid fa-list player-right-btn"></i>
+                <i class="fa-solid fa-desktop player-right-btn"></i>
+                <i class="fa-solid fa-volume-high player-right-btn"></i>
+                <div class="player-volume">
+                    <input
+                        type="range"
+                        id="volumeControl"
+                        value="70"
+                        min="0"
+                        max="100"
+                    />
+                </div>
+                <i class="fa-solid fa-expand player-right-btn"></i>
+            </div>
+        </div>
+
+        <script type="module" src="script.js"></script>
+        <script src="oneko-web.js"></script>
+    </body>
+</html>

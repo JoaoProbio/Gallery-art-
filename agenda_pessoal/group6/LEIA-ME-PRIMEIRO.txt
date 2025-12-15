@@ -1,0 +1,230 @@
+================================================================================
+  ⚠️ SISTEMA DE CONTROLE DE ESTOQUE - LEIA PRIMEIRO ⚠️
+================================================================================
+
+📍 LOCALIZAÇÃO DO PROJETO:
+   C:\xampp\htdocs\group6\
+
+================================================================================
+🌐 URLS CORRETAS PARA ACESSAR O SISTEMA:
+================================================================================
+
+✅ PÁGINA PRINCIPAL (Login e Lista de Produtos):
+   http://localhost/group6/
+
+✅ CADASTRAR PRODUTO:
+   http://localhost/group6/produtos_cadastrar.php
+
+✅ GERENCIAR USUÁRIOS (Admin):
+   http://localhost/group6/usuarios.php
+
+❌ NÃO USE:
+   http://localhost/group6/  (INCORRETO - Dará erro "Not Found")
+
+================================================================================
+🔐 CREDENCIAIS DE ACESSO:
+================================================================================
+
+ADMINISTRADOR:
+- Usuário: admin
+- Senha: 123456
+
+================================================================================
+📋 INSTALAÇÃO RÁPIDA (3 PASSOS):
+================================================================================
+
+1. INICIAR SERVIÇOS NO XAMPP
+   ✓ Abra o painel de controle do XAMPP
+   ✓ Inicie: Apache e MySQL
+
+2. CRIAR BANCO DE DADOS
+   ✓ Acesse: http://localhost/phpmyadmin
+   ✓ Clique em "SQL"
+   ✓ Abra: group6/db/setup.sql
+   ✓ Copie TODO o conteúdo
+   ✓ Cole no phpMyAdmin e clique "Executar"
+
+3. ACESSAR O SISTEMA
+   ✓ Abra: http://localhost/group6/
+   ✓ Login: admin / 123456
+
+================================================================================
+📦 O QUE VOCÊ PODE FAZER:
+================================================================================
+
+GESTÃO DE PRODUTOS:
+✓ Cadastrar novos produtos no estoque
+✓ Editar informações de produtos existentes
+✓ Excluir produtos do estoque
+✓ Ver lista completa com todos os produtos
+✓ Visualizar estatísticas do estoque
+
+INFORMAÇÕES DOS PRODUTOS:
+✓ Nome do produto
+✓ Quantidade em estoque
+✓ Preço de custo (quanto você pagou)
+✓ Preço de venda (quanto você vende)
+✓ Descrição detalhada
+✓ Margem de lucro calculada automaticamente
+
+DASHBOARD:
+✓ Total de produtos cadastrados
+✓ Total de itens em estoque
+✓ Valor total em custo
+✓ Lucro potencial se vender tudo
+
+ALERTAS INTELIGENTES:
+✓ Produtos com estoque CRÍTICO (menos de 10 unidades)
+✓ Produtos com estoque BAIXO (entre 10 e 19 unidades)
+✓ Código de cores na margem de lucro:
+   - Verde: Margem ≥ 30% (Excelente)
+   - Amarelo: Margem entre 15% e 29% (Bom)
+   - Vermelho: Margem < 15% (Baixo)
+
+GERENCIAR USUÁRIOS (somente Admin):
+✓ Ver lista de usuários do sistema
+✓ Cadastrar novos usuários
+✓ Excluir usuários (exceto você mesmo)
+✓ Definir níveis de acesso
+
+================================================================================
+🧮 CALCULADORA DE MARGEM DE LUCRO:
+================================================================================
+
+Ao cadastrar ou editar produtos, você terá acesso a uma calculadora que
+mostra em TEMPO REAL:
+
+✓ Preço de Custo
+✓ Preço de Venda
+✓ Margem de Lucro (%)
+✓ Lucro por Unidade
+✓ Lucro Total do Estoque
+
+A calculadora atualiza automaticamente enquanto você digita!
+
+================================================================================
+📊 PRODUTOS DE EXEMPLO:
+================================================================================
+
+O sistema vem com 10 produtos pré-cadastrados para você testar:
+- Notebook Dell Inspiron 15
+- Mouse Logitech MX Master
+- Teclado Mecânico Redragon
+- Monitor LG 24 Polegadas
+- Webcam Logitech C920
+- Headset HyperX Cloud II
+- SSD Kingston 480GB
+- Memória RAM DDR4 8GB
+- HD Externo Seagate 1TB
+- Cabo HDMI 2.0 2m
+
+================================================================================
+🐛 SOLUÇÕES RÁPIDAS PARA PROBLEMAS:
+================================================================================
+
+PROBLEMA: "Not Found" ao acessar qualquer página
+SOLUÇÃO: Use o caminho completo:
+         http://localhost/group6/
+
+PROBLEMA: "Falha na conexão com o banco de dados"
+SOLUÇÃO:
+   1. Verifique se MySQL está rodando no XAMPP
+   2. Execute o arquivo db/setup.sql no phpMyAdmin
+   3. Confirme que o banco "estoque_db" foi criado
+
+PROBLEMA: "Call to undefined function mysqli_connect()"
+SOLUÇÃO:
+   1. Abra: C:\xampp\php\php.ini
+   2. Procure: ;extension=mysqli
+   3. Remova o ";" para: extension=mysqli
+   4. Salve e reinicie o Apache
+
+PROBLEMA: Não consigo fazer login
+SOLUÇÃO:
+   1. Verifique se usou: admin / 123456
+   2. Confirme se o banco foi criado corretamente
+   3. Limpe os cookies do navegador (Ctrl+Shift+Del)
+   4. Tente em modo anônimo/privado
+
+PROBLEMA: Produtos não aparecem na lista
+SOLUÇÃO:
+   1. Faça login primeiro
+   2. Verifique se o banco tem dados (phpMyAdmin)
+   3. Execute novamente o setup.sql se necessário
+
+PROBLEMA: Calculadora não atualiza valores
+SOLUÇÃO:
+   1. Verifique se JavaScript está habilitado
+   2. Pressione F12 e veja erros no Console
+   3. Recarregue a página (Ctrl+F5)
+
+================================================================================
+💡 DICAS IMPORTANTES:
+================================================================================
+
+CADASTRO DE PRODUTOS:
+✓ Sempre preencha nome, quantidade e preços
+✓ Use vírgula ou ponto para decimais (2.50 ou 2,50)
+✓ Adicione descrição para facilitar identificação
+✓ Mantenha margem de lucro acima de 15%
+
+GESTÃO DO ESTOQUE:
+✓ Fique atento aos alertas de estoque baixo/crítico
+✓ Atualize quantidades após vendas ou compras
+✓ Revise preços periodicamente
+
+SEGURANÇA:
+✓ Sempre faça logout ao terminar (botão "Sair")
+✓ Não compartilhe suas credenciais
+✓ Troque a senha padrão em produção
+
+================================================================================
+📖 DOCUMENTAÇÃO COMPLETA:
+================================================================================
+
+Consulte o arquivo README.md para documentação detalhada incluindo:
+- Estrutura completa do banco de dados
+- Explicação de todas as funcionalidades
+- Melhorias futuras planejadas
+- Informações técnicas avançadas
+
+================================================================================
+📞 ACESSO RÁPIDO:
+================================================================================
+
+Sistema Principal:
+http://localhost/group6/
+
+phpMyAdmin (gerenciar banco):
+http://localhost/phpmyadmin
+
+Painel XAMPP:
+http://localhost/dashboard
+
+================================================================================
+🎯 PRIMEIROS PASSOS RECOMENDADOS:
+================================================================================
+
+1. Faça login no sistema
+2. Explore o dashboard e estatísticas
+3. Veja os produtos de exemplo cadastrados
+4. Cadastre um produto novo para testar
+5. Edite um produto existente
+6. Use a calculadora de margem
+7. Explore o gerenciamento de usuários (se for admin)
+
+================================================================================
+✨ RECURSOS ESPECIAIS:
+================================================================================
+
+✓ Interface responsiva (funciona em mobile, tablet e desktop)
+✓ Cores e badges para identificação rápida
+✓ Formatação automática de valores em R$
+✓ Cálculos automáticos de lucro e margem
+✓ Alertas visuais de estoque
+✓ Sistema seguro com criptografia de senhas
+✓ Validação de dados em tempo real
+
+================================================================================
+Desenvolvido para fins educacionais.
+================================================================================

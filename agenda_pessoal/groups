@@ -1,0 +1,5 @@
+6. Painel de Controle de Estoque Básico
+Sistema para registrar itens em estoque (nome, quantidade, preço de custo/venda). Deve mostrar a lista de produtos.
+
+9. Livro de Visitas/Comentários Simples
+Sistema onde visitantes podem deixar comentários (nome, email opcional, mensagem). Deve exibir os comentários em ordem cronológica reversa.

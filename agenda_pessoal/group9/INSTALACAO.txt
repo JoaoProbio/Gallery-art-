@@ -1,0 +1,164 @@
+================================================================================
+  LIVRO DE VISITAS - INSTRUÇÕES RÁPIDAS DE INSTALAÇÃO
+================================================================================
+
+📋 REQUISITOS:
+- XAMPP (Apache + MySQL + PHP 7.4+)
+- Navegador web moderno
+
+================================================================================
+🚀 PASSO A PASSO - INSTALAÇÃO:
+================================================================================
+
+1. INICIAR SERVIÇOS XAMPP
+   ✓ Abra o painel de controle do XAMPP
+   ✓ Inicie os módulos: Apache e MySQL
+
+2. COPIAR ARQUIVOS
+   ✓ Copie a pasta "group9" para: C:\xampp\htdocs\
+   ✓ Caminho final: C:\xampp\htdocs\group9\
+
+3. CRIAR BANCO DE DADOS
+
+   OPÇÃO A - Via phpMyAdmin (Recomendado):
+   ✓ Acesse: http://localhost/phpmyadmin
+   ✓ Clique em "SQL" no menu superior
+   ✓ Abra o arquivo: group9/db/setup.sql
+   ✓ Copie TODO o conteúdo do arquivo
+   ✓ Cole na área SQL do phpMyAdmin
+   ✓ Clique em "Executar"
+
+   OPÇÃO B - Via Linha de Comando:
+   ✓ Abra o terminal/CMD
+   ✓ Execute: mysql -u root -p < C:\xampp\htdocs\group9\db\setup.sql
+
+4. VERIFICAR CONFIGURAÇÃO
+   ✓ Abra: group9/config/database.php
+   ✓ Confirme as credenciais:
+     - Servidor: localhost
+     - Usuário: root
+     - Senha: (vazia)
+     - Banco: livro_visitas_db
+
+5. ACESSAR O SISTEMA
+   ✓ Abra o navegador
+   ✓ Digite: http://localhost/group9/
+
+================================================================================
+👤 CREDENCIAIS DE TESTE:
+================================================================================
+
+ADMINISTRADOR:
+- Usuário: admin
+- Senha: 123456
+
+Para fazer login como administrador, acesse:
+http://localhost/group9/usuarios.php
+
+================================================================================
+📖 COMO USAR:
+================================================================================
+
+VISITANTES (Público):
+1. Acesse: http://localhost/group9/
+2. Preencha o formulário:
+   - Nome: obrigatório
+   - Email: opcional
+   - Mensagem: obrigatório (máximo 1000 caracteres)
+3. Clique em "Enviar Comentário"
+4. Seu comentário aparecerá na lista
+
+ADMINISTRADORES:
+1. Acesse: http://localhost/group9/usuarios.php
+2. Faça login com: admin / 123456
+3. Você pode:
+   - Ver todos os comentários
+   - Excluir comentários (botão 🗑️ em cada comentário)
+   - Gerenciar usuários do sistema
+   - Cadastrar novos administradores
+
+================================================================================
+🐛 SOLUÇÃO DE PROBLEMAS:
+================================================================================
+
+PROBLEMA: "Falha na conexão com o banco de dados"
+SOLUÇÃO:
+- Verifique se MySQL está rodando no XAMPP
+- Confirme se o banco "livro_visitas_db" foi criado no phpMyAdmin
+- Verifique credenciais em config/database.php
+
+PROBLEMA: "Call to undefined function mysqli_connect()"
+SOLUÇÃO:
+- Abra: C:\xampp\php\php.ini
+- Procure: ;extension=mysqli
+- Remova o ";" para: extension=mysqli
+- Salve e reinicie o Apache no XAMPP
+
+PROBLEMA: Comentários não aparecem
+SOLUÇÃO:
+- Verifique se há dados na tabela "comentarios" no phpMyAdmin
+- Aperte F12 no navegador e veja se há erros no Console
+
+PROBLEMA: Não consigo fazer login
+SOLUÇÃO:
+- Verifique se existe o usuário "admin" na tabela "usuarios"
+- Use: admin / 123456
+- Limpe cookies do navegador (Ctrl+Shift+Del)
+- Tente em modo anônimo
+
+================================================================================
+📁 ESTRUTURA DE ARQUIVOS:
+================================================================================
+
+group9/
+├── assets/
+│   └── style.css          (Estilos customizados)
+├── config/
+│   └── database.php       (Configuração do banco)
+├── db/
+│   └── setup.sql          (Script de instalação do banco)
+├── includes/
+│   ├── header.php         (Cabeçalho HTML)
+│   └── footer.php         (Rodapé HTML)
+├── index.php              (Página principal - comentários)
+├── processa.php           (Processa todas as ações)
+├── usuarios.php           (Gerenciar usuários - Admin)
+├── usuarios_cadastrar.php (Cadastrar usuários - Admin)
+├── README.md              (Documentação completa)
+└── INSTALACAO.txt         (Este arquivo)
+
+================================================================================
+🗄️ TABELAS DO BANCO DE DADOS:
+================================================================================
+
+1. comentarios
+   - Armazena os comentários dos visitantes
+   - Campos: id, nome, email, mensagem, data_criacao
+
+2. usuarios
+   - Armazena os usuários administradores
+   - Campos: id, usuario, email, senha, nivel, data_criacao
+
+================================================================================
+🔒 SEGURANÇA:
+================================================================================
+
+✓ Senhas armazenadas com hash bcrypt
+✓ Prepared statements (previne SQL Injection)
+✓ Sanitização de entradas do usuário
+✓ Validação de dados no backend
+✓ Proteção de páginas administrativas
+✓ Escape de HTML (previne XSS)
+
+================================================================================
+📧 SUPORTE:
+================================================================================
+
+Documentação completa: Veja o arquivo README.md
+PHP: https://www.php.net/
+MySQL: https://dev.mysql.com/doc/
+Bootstrap: https://getbootstrap.com/
+
+================================================================================
+Desenvolvido para fins educacionais
+================================================================================
